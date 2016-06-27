@@ -1,0 +1,19 @@
+{
+  "name": "find-or-create",
+  "version": "1.0.0",
+  "description": "Moongose find or create schema plugin",
+  "main": "index.js",
+  "keywords": [
+    "mongoose",
+    "schema",
+    "find",
+    "or",
+    "create"
+  ],
+  "author": "Manuel Di Iorio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuel-di-iorio/find-or-create.git"
+  }
+}
