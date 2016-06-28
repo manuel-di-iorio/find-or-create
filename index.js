@@ -1,13 +1,11 @@
 /** MONGOOSE FIND OR CREATE SCHEMA PLUGIN 
  * 
- * @version: 0.1.0
+ * @version: 0.1.1
  * @author: Manuel Di Iorio
  * @license: MIT
  **/
 
-var findOrCreate;
-
-findOrCreate = function(query, doc, options, callback) {
+module.exports = function(query, doc, options, callback) {
   var fn, self;
 
   self = this;
