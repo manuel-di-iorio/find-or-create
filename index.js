@@ -1,6 +1,5 @@
 /** MONGOOSE FIND OR CREATE SCHEMA PLUGIN 
  * 
- * @version: 0.1.1
  * @author: Manuel Di Iorio
  * @license: MIT
  **/
