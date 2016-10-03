@@ -12,7 +12,7 @@ Extend the mongoose schemas with a findOrCreate() plugin. Essentialy, if a docum
 ```javascript
 yourSchema.statics.findOrCreate = require("find-or-create");
 YourModel = mongoose.model("yourSchema", yourSchema);
-YourModel.findOrCreate({_id: myID}, {apples: 2}, (err, doc) => {
+YourModel.findOrCreate({_id: myID}, {apples: 2}, (err, doc, isNew) => {
     if (err) return console.error(err);
     console.log(doc);
 });
