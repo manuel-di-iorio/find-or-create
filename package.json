@@ -1,8 +1,69 @@
 {
-  "name": "find-or-create",
-  "version": "0.1.4",
+  "_args": [
+    [
+      {
+        "raw": "find-or-create@0.1.4",
+        "scope": null,
+        "escapedName": "find-or-create",
+        "name": "find-or-create",
+        "rawSpec": "0.1.4",
+        "spec": "0.1.4",
+        "type": "version"
+      },
+      "D:\\Paymeabit\\test"
+    ]
+  ],
+  "_from": "find-or-create@0.1.4",
+  "_id": "find-or-create@0.1.4",
+  "_inCache": true,
+  "_location": "/find-or-create",
+  "_nodeVersion": "4.4.4",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/find-or-create-0.1.4.tgz_1472718713309_0.9821477988734841"
+  },
+  "_npmUser": {
+    "name": "xeryan",
+    "email": "xeryan@gmail.com"
+  },
+  "_npmVersion": "2.15.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "find-or-create@0.1.4",
+    "scope": null,
+    "escapedName": "find-or-create",
+    "name": "find-or-create",
+    "rawSpec": "0.1.4",
+    "spec": "0.1.4",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/find-or-create/-/find-or-create-0.1.4.tgz",
+  "_shasum": "419855b16259ea4706403a5a9283fc6746ccd0e8",
+  "_shrinkwrap": null,
+  "_spec": "find-or-create@0.1.4",
+  "_where": "D:\\Paymeabit\\test",
+  "author": {
+    "name": "Manuel Di Iorio"
+  },
+  "bugs": {
+    "url": "https://github.com/manuel-di-iorio/find-or-create/issues"
+  },
+  "dependencies": {},
   "description": "Moongose find or create schema plugin",
-  "main": "index.js",
+  "devDependencies": {
+    "mocha": "3.2.0",
+    "mongoose": "4.8.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "419855b16259ea4706403a5a9283fc6746ccd0e8",
+    "tarball": "https://registry.npmjs.org/find-or-create/-/find-or-create-0.1.4.tgz"
+  },
+  "gitHead": "8d5b5e1ba7400d613f55aaae251372d63e0b5b88",
+  "homepage": "https://github.com/manuel-di-iorio/find-or-create#readme",
   "keywords": [
     "mongoose",
     "schema",
@@ -10,44 +71,23 @@
     "or",
     "create"
   ],
-  "author": {
-    "name": "Manuel Di Iorio"
-  },
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/manuel-di-iorio/find-or-create.git"
-  },
-  "gitHead": "8d5b5e1ba7400d613f55aaae251372d63e0b5b88",
-  "bugs": {
-    "url": "https://github.com/manuel-di-iorio/find-or-create/issues"
-  },
-  "homepage": "https://github.com/manuel-di-iorio/find-or-create#readme",
-  "_id": "find-or-create@0.1.4",
-  "scripts": {},
-  "_shasum": "419855b16259ea4706403a5a9283fc6746ccd0e8",
-  "_from": "find-or-create@0.1.4",
-  "_npmVersion": "2.15.1",
-  "_nodeVersion": "4.4.3",
-  "_npmUser": {
-    "name": "xeryan",
-    "email": "xeryan@gmail.com"
-  },
-  "dist": {
-    "shasum": "ade8c02ec7b10774195c59bbf587440064c7b568",
-    "tarball": "https://registry.npmjs.org/find-or-create/-/find-or-create-0.1.2.tgz"
-  },
+  "main": "index.js",
   "maintainers": [
     {
       "name": "xeryan",
       "email": "xeryan@gmail.com"
     }
   ],
-  "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/find-or-create-0.1.2.tgz_1467119420218_0.14616198232397437"
+  "name": "find-or-create",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuel-di-iorio/find-or-create.git"
   },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/find-or-create/-/find-or-create-0.1.2.tgz",
-  "readmeFilename": "README.md"
+  "scripts": {
+    "test": "node_modules/.bin/mocha index.test"
+  },
+  "version": "1.0.0"
 }
