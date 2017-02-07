@@ -30,13 +30,27 @@ beforeEach(function(done) {
     });
 });
 
+// Start the tests
+describe("Basic tests", function() {
+    it('should does not throw an expection, when callback and options are not provided', function(done) {
+        TestModel.findOrCreate({}, null).exec(done);
+    });
 
-// Note: promise and exec() return types are tested only the first time.
+    it('should catch an error when an incorrect number of arguments are passed', function(done) {
+        assert.throws(function() {
+            TestModel.findOrCreate();
+        }, Error);
 
-describe("Basic argument test", function() {
-    it('should does not throws an expection', function(done) {
-        TestModel.findOrCreate({}, null)
-        .exec(done);
+        assert.throws(function() {
+            TestModel.findOrCreate({});
+        }, Error);
+
+        done()
+    });
+
+    it('should catch a promise error when an issue happens with the query', function(done) {
+        TestModel.findOrCreate({"$thisOperatorDoesNotExists": true}, null)
+        .catch((err) => done(null));
     });
 });
 
@@ -81,19 +95,6 @@ describe("Find or create without upserting", function() {
         const doc = {name: "Conan"};
 
         TestModel.findOrCreate(doc, null, {fields: "age"}, (err, result) => {
-            assert.ifError(err);
-            assert.ifError(result.doc.name);
-            assert.strictEqual(result.isNew, false);
-            done();
-        });
-    });
-
-    it('should returns the document found, using a custom query', function(done) {
-        const options = {
-            query: TestModel.findOne( {age: {$exists: true}} ).select("_id")
-        };
-
-        TestModel.findOrCreate(null, null, options, (err, result) => {
             assert.ifError(err);
             assert.ifError(result.doc.name);
             assert.strictEqual(result.isNew, false);

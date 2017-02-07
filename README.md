@@ -1,5 +1,5 @@
 # Mongoose FindOrCreate()
-## Extend the mongoose schemas with a findOrCreate() plugin. Essentially, if a document is not found, will be created or (if specified) atomically updated
+## Extend the mongoose schemas with a findOrCreate() plugin. Essentially, if a document is not found, will be atomically created or (if specified) updated
 
 ### Install it with:
 
@@ -20,30 +20,15 @@ YourModel.findOrCreate({_id: myID}, {apples: 2}, (err, result) => {
 });
 ```
 
-Example using the promise return:
+Example upserting the document and using the promise return:
 
 ```javascript
-Model.findOrCreate({_id: myID}, {apples: 2})
+Model.findOrCreate({_id: myID, apples: 2}, {apples: 5}, {upsert: true})
 .then((result) => {
     console.log(result.doc);
     console.log(result.isNew);
 })
-.catch((err) => {
-    console.error(err);
-});
-```
-
-
-Example upserting the document and using the .exec() method:
-
-```javascript
-// The document will be created if not exists or will be updated if already exists
-Model.findOrCreate({_id: myID, apples: 2}, {apples: 5}, {upsert: true})
-.exec((err, result) => {
-    if (err) return console.error(err);
-    console.log(result.doc);
-    console.log(result.isNew);
-});
+.catch(console.error);
 ```
 
 
@@ -57,22 +42,13 @@ If you don't specify a callback, it will be returned a promise.
 
 ---
 
-**doc** is the document that will be inserted if the document based on your **query** is not found, otherwise the record will be updated with the new document (if upsert is enabled).
+- **doc** is the document that will be inserted if the document based on your **query** is not found, otherwise the record will be updated with the new document (if upsert is enabled).
 
-**options** is an optional object that will be passed to the underlying mongoose 'find/findOrCreate' method. Remember to set `{upsert: true}` if you want to update the doc when it already exists.
+- **options** is an optional object that will be passed to the underlying mongoose 'findOrCreate' method.
 
-You can find the possible options here:
-- **Default (no upsert):**
+    You can find the possible options here: http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate
 
-  Use the `fields` option for the query projection. (Note: this option is only used when a custom query is _not_ provided).
-  Example: `{fields: "_id createdAt"}`
-
-  You can also provide your custom query with the `query` option (for example for changing the sorting order, skipping, etc..)
-
-
-- **With `{upsert: true}`:** http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate
-
-  Any option you pass will override the default settings, except _passRawResult_ which is always _true_.
+    Set `{upsert: true}` to update the document when it already exists, otherwhise it will be only inserted when not found
 
 
 ---

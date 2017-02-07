@@ -1,50 +1,4 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "find-or-create@0.1.4",
-        "scope": null,
-        "escapedName": "find-or-create",
-        "name": "find-or-create",
-        "rawSpec": "0.1.4",
-        "spec": "0.1.4",
-        "type": "version"
-      },
-      "D:\\Paymeabit\\test"
-    ]
-  ],
-  "_from": "find-or-create@0.1.4",
-  "_id": "find-or-create@0.1.4",
-  "_inCache": true,
-  "_location": "/find-or-create",
-  "_nodeVersion": "4.4.4",
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/find-or-create-0.1.4.tgz_1472718713309_0.9821477988734841"
-  },
-  "_npmUser": {
-    "name": "xeryan",
-    "email": "xeryan@gmail.com"
-  },
-  "_npmVersion": "2.15.1",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "find-or-create@0.1.4",
-    "scope": null,
-    "escapedName": "find-or-create",
-    "name": "find-or-create",
-    "rawSpec": "0.1.4",
-    "spec": "0.1.4",
-    "type": "version"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/find-or-create/-/find-or-create-0.1.4.tgz",
-  "_shasum": "419855b16259ea4706403a5a9283fc6746ccd0e8",
-  "_shrinkwrap": null,
-  "_spec": "find-or-create@0.1.4",
-  "_where": "D:\\Paymeabit\\test",
   "author": {
     "name": "Manuel Di Iorio"
   },
@@ -57,13 +11,6 @@
     "mocha": "3.2.0",
     "mongoose": "4.8.1"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "419855b16259ea4706403a5a9283fc6746ccd0e8",
-    "tarball": "https://registry.npmjs.org/find-or-create/-/find-or-create-0.1.4.tgz"
-  },
-  "gitHead": "8d5b5e1ba7400d613f55aaae251372d63e0b5b88",
-  "homepage": "https://github.com/manuel-di-iorio/find-or-create#readme",
   "keywords": [
     "mongoose",
     "schema",
@@ -80,8 +27,6 @@
     }
   ],
   "name": "find-or-create",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manuel-di-iorio/find-or-create.git"
