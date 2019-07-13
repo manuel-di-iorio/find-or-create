@@ -35,16 +35,15 @@ module.exports = function(query, doc, options, callback) {
             setDefaultsOnInsert: true
         }, options);
 
-        options.passRawResult = true;
+        options.rawResult = true;
         options.upsert = true;
 
         // Execute the atomic query
-        self.findOneAndUpdate(query, doc, options, (err, record, raw) => {
+        self.findOneAndUpdate(query, doc, options, (err, record) => {
             if (err) return next(err);
-
             next(null, {
-                doc: record,
-                isNew: !raw.lastErrorObject.updatedExisting
+                doc: record.value,
+                isNew: !record.lastErrorObject.updatedExisting
             });
         });
     };
