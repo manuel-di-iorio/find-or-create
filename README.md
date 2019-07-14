@@ -1,11 +1,9 @@
-# Mongoose FindOrCreate()
-## Extend the mongoose schemas with a findOrCreate() plugin. Essentially, if a document is not found, will be atomically created or (if specified) updated
+# FindOrCreate v2.0 for Mongoose
+### Extend the mongoose schemas with a findOrCreate() plugin. Essentially, if a document is not found, will be atomically created or (if specified) updated
 
 ### Install it with:
 
     npm i find-or-create
-    or
-    git clone https://github.com/manuel-di-iorio/find-or-create.git
 
 ### **Examples**:
 
@@ -30,6 +28,20 @@ Model.findOrCreate({_id: myID, apples: 2}, {apples: 5}, {upsert: true})
 })
 .catch(console.error);
 ```
+
+## Note:
+
+As of Mongoose v5, to use this module you need to set the global option `useFindAndModify` to _false_, otherwise a warning will be logged.
+
+Example:
+```
+mongoose.connect(uri, { useFindAndModify: false });
+```
+
+## Upgrading to Mongoose 5:
+
+The latest v2.0 of this plugin is compatible with Mongoose 5.x.
+If you need retro-compatibility with Mongoose 4.x, please install the version 1.1 of this module.
 
 
 ---

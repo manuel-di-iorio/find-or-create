@@ -8,8 +8,8 @@
   "dependencies": {},
   "description": "Moongose find or create schema plugin",
   "devDependencies": {
-    "mocha": "3.2.0",
-    "mongoose": "4.8.1"
+    "mocha": "^3.2.0",
+    "mongoose": "^5.6.4"
   },
   "keywords": [
     "mongoose",
@@ -22,8 +22,8 @@
   "main": "index.js",
   "maintainers": [
     {
-      "name": "xeryan",
-      "email": "xeryan@gmail.com"
+      "name": "manuel-di-iorio",
+      "email": "manuel.diiorio.mail@gmail.com"
     }
   ],
   "name": "find-or-create",
@@ -34,5 +34,5 @@
   "scripts": {
     "test": "node_modules/.bin/mocha index.test"
   },
-  "version": "1.1.0"
+  "version": "2.0.0"
 }
