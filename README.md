@@ -1,3 +1,5 @@
+# NOTICE: Unmaintained repository
+
 # FindOrCreate v2.0 for Mongoose
 ### Extend the mongoose schemas with a findOrCreate() plugin. Essentially, if a document is not found, will be atomically created or (if specified) updated
 
